@@ -10,6 +10,7 @@ import Signup from './pages/SignUp';
 import LoginPage from './pages/Login';
 import { AuthContext, AuthProvider } from '../AuthContext';
 import { Toaster } from 'react-hot-toast';
+import CourseEnrollment from './pages/CourseEnrollment';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/courses/:id" element={<CourseDetails />} />
+          <Route path="/courses/:id/enroll" element={<CourseEnrollment />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<LoginPage />} />
         </Routes>
