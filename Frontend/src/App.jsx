@@ -6,17 +6,29 @@ import CourseDetails from './pages/CourseDetails';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './App.css';
+import Signup from './pages/SignUp';
+import LoginPage from './pages/Login';
+import { AuthContext, AuthProvider } from '../AuthContext';
+import { Toaster } from 'react-hot-toast';
+
 
 function App() {
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/courses" element={<Courses />} />
-        <Route path="/courses/:id" element={<CourseDetails />} />
-      </Routes>
-      <Footer />
+      <AuthProvider>
+        <Header/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/courses/:id" element={<CourseDetails />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/signin" element={<LoginPage />} />
+        </Routes>
+        <Footer />
+        
+
+      </AuthProvider>
+
     </>
   );
 }
