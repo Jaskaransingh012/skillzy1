@@ -10,6 +10,8 @@ import Signup from './pages/SignUp';
 import LoginPage from './pages/Login';
 import { AuthContext, AuthProvider } from '../AuthContext';
 import { Toaster } from 'react-hot-toast';
+import UserProfile from './pages/profile';
+// import ProfilePage from './pages/profile';
 
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
           <Route path="/courses/:id" element={<CourseDetails />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<LoginPage />} />
+          <Route path="/profile" element={<UserProfile />} />
         </Routes>
         <Footer />
         
